@@ -43,7 +43,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MessagesScreen() {
-    val scrollState = rememberLazyListState()
+    //val scrollState = rememberLazyListState()
 
     Scaffold(
         topBar = {
