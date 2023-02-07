@@ -52,7 +52,7 @@ fun MessagesScreen() {
 
 @Composable
 fun MessagesList(messages: List<MessageWithChangeOfSenderIndicator>) {
-    //var lastSender: User? by rememberSaveable { mutableStateOf(null) } // (1)
+    //var lastSender: User? by rememberSaveable { mutableStateOf(null) } // TODO
 
     LazyColumn(
         Modifier
@@ -63,7 +63,7 @@ fun MessagesList(messages: List<MessageWithChangeOfSenderIndicator>) {
 
         items(messages) { message ->
 
-            //  Log.d("DEBUG", "$lastSender == ${message.sender}")
+            //  Log.d("DEBUG", "$lastSender == ${message.sender}") // TODO: No deja de recomponer
 
             StateFullListItem(
                 message,
