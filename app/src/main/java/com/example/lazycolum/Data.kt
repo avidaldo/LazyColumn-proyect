@@ -57,15 +57,6 @@ class MessageWithChangeOfSenderIndicator(
 ) : Message(sender, text, timestamp)
 
 
-/*val messagesWithChangeOfSenderIndicator = messages.runningReduce { acc, message ->
-    MessageWithChangeOfSenderIndicator(
-        sender = message.sender,
-        text = message.text,
-        timestamp = message.timestamp,
-        isSenderChanged = (acc.sender == message.sender)
-    )
-}as List<MessageWithChangeOfSenderIndicator>*/
-
 
 val messagesWithChangeOfSenderIndicator = messages.run {
     val result = ArrayList<MessageWithChangeOfSenderIndicator>(this.size)
@@ -83,3 +74,5 @@ val messagesWithChangeOfSenderIndicator = messages.run {
     }
     result
 }
+/* TODO: Una aplicación normal de mensajería recibiría cada nuevo mensaje de forma asíncrona y no se
+podría gestionar así todo el listado. */
