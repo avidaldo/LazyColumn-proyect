@@ -7,7 +7,7 @@ enum class User { LOCAL, REMOTE }
 
 open class Message(val sender: User, val text: String, val timestamp: LocalDateTime)
 
-val formatter: DateTimeFormatter =
+val formatter =
     DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")  // TODO: check wrong pattern. IDE made me declare Type explicitly
 
 val messages = listOf(
