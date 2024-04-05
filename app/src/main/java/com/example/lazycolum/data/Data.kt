@@ -1,4 +1,4 @@
-package com.example.lazycolum
+package com.example.lazycolum.data
 
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -58,7 +58,7 @@ class MessageWithChangeOfSenderIndicator(
 
 
 
-val messagesWithChangeOfSenderIndicator = messages.run {
+fun getMessagesWithChangeOfSenderIndicator() = messages.run {
     val result = ArrayList<MessageWithChangeOfSenderIndicator>(this.size)
     var acc: User? = null
     for (message in this) {

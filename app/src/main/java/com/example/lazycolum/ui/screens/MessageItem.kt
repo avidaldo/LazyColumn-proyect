@@ -1,4 +1,4 @@
-package com.example.lazycolum
+package com.example.lazycolum.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -13,6 +13,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.End
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.lazycolum.data.Message
+import com.example.lazycolum.data.User
+import com.example.lazycolum.data.formatter
 import com.example.lazycolum.ui.theme.Otro
 
 
@@ -21,7 +24,6 @@ fun StateFullListItem(message: Message, isSameSenderAsPrevious: Boolean) {
 
     var showDateTime by rememberSaveable { mutableStateOf(false) }
     val onClick = { showDateTime = !showDateTime }
-
 
     StateLessListItem(message, isSameSenderAsPrevious, showDateTime, onClick)
 }
